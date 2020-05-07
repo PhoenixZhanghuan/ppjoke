@@ -5,4 +5,6 @@ package com.example.ppjoke.utils;
  */
 public class AppConfig {
 
+
+
 }

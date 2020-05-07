@@ -14,11 +14,11 @@ public class Destination {
      * id : 1752128750
      */
 
-    private boolean isFragment;
-    private boolean asStarter;
-    private boolean needLogin;
-    private String pageUrl;
-    private String className;
-    private int id;
+    public boolean isFragment;
+    public boolean asStarter;
+    public boolean needLogin;
+    public String pageUrl;
+    public String className;
+    public int id;
 
 }

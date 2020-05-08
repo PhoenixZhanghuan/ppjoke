@@ -2,6 +2,9 @@ package com.example.ppjoke.model;
 
 import java.util.List;
 
+/**
+ * @author zhanghuan
+ */
 public class BottomBar {
 
 

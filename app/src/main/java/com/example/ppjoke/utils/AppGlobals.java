@@ -5,11 +5,14 @@ import android.app.Application;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * @author zhanghuan
+ */
 public class AppGlobals {
 
     private static Application sApplication;
 
-    public static Application getsApplication() {
+    public static Application getApplication() {
 
         if(sApplication == null) {
             try {

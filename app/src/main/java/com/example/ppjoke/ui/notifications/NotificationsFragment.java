@@ -18,7 +18,7 @@ import com.example.ppjoke.R;
 /**
  * @author zhanghuan
  */
-@FragmentDestination(pageUrl = "main/tabs/notification", asStarter = false)
+@FragmentDestination(pageUrl = "main/tabs/sofa", asStarter = false)
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;

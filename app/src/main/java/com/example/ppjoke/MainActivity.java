@@ -4,24 +4,20 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import com.example.ppjoke.model.Destination;
-import com.example.ppjoke.utils.AppConfig;
 import com.example.ppjoke.utils.NavGraphBuilder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
-import org.w3c.dom.Text;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
+/**
+ * @author zhanghuan
+ */
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private NavController navController;
@@ -34,9 +30,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupWithNavController(navView, navController);
-        NavGraphBuilder.build(navController);
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = NavHostFragment.findNavController(fragment);
+        NavGraphBuilder.build(navController, this, fragment.getId());
 
         navView.setOnNavigationItemSelectedListener(this);
     }

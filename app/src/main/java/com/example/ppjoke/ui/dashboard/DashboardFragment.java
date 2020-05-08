@@ -18,7 +18,7 @@ import com.example.ppjoke.R;
 /**
  * @author zhanghuan
  */
-@FragmentDestination(pageUrl = "main/tabs/dash", asStarter = false)
+@FragmentDestination(pageUrl = "main/tabs/find", asStarter = false)
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;

@@ -1,0 +1,21 @@
+package com.example.libnetwork.cache;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
+
+/**
+ * @author zhanghuan
+ */
+
+@Entity(tableName = "cache")
+public class Cache implements Serializable {
+
+    @PrimaryKey(autoGenerate = false)
+    @NonNull
+    public String key;
+
+    public byte[] data;
+}

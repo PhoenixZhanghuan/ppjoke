@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.ppjoke"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -45,5 +45,6 @@ dependencies {
     //如果你使用kotlin,这里需要使用 kapt project
     annotationProcessor project(":libnavcompiler")
 
-    implementation 'com.alibaba:fastjson:1.2.59'
+    implementation project(path: ':libcommon')
+    implementation project(path: ':libnetwork')
 }

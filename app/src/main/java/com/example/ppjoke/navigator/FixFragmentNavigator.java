@@ -22,6 +22,7 @@ import java.util.Map;
 
 /**
  * 定制的Fragment导航器，替换ft.replace(mContainerId, frag);为 hide()/show()
+ * @author zhanghuan
  */
 @Navigator.Name("fixfragment")
 public class FixFragmentNavigator extends FragmentNavigator {

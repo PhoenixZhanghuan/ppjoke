@@ -1,8 +1,5 @@
 package com.example.libnetwork;
 
-import com.sun.tools.javac.util.Convert;
-
-import java.net.HttpURLConnection;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;

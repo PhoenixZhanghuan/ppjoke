@@ -2,8 +2,13 @@ package com.example.ppjoke;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 
+import com.alibaba.fastjson.JSONObject;
+import com.example.libnetwork.ApiResponse;
+import com.example.libnetwork.GetRequest;
+import com.example.libnetwork.JsonCallback;
 import com.example.ppjoke.utils.NavGraphBuilder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -35,6 +40,24 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         NavGraphBuilder.build(navController, this, fragment.getId());
 
         navView.setOnNavigationItemSelectedListener(this);
+
+        GetRequest<JSONObject> request = new GetRequest<JSONObject>("http://www.baidu.com");
+//        request.execute();
+
+        request.execute(new JsonCallback() {
+            @Override
+            public void onSuccess(ApiResponse response) {
+//                super.onSuccess(response);
+                Log.e("zhang", response.message);
+            }
+
+            @Override
+            public void onError(ApiResponse response) {
+                super.onError(response);
+                Log.e("zhang", response.message);
+            }
+        });
+
     }
 
     @Override

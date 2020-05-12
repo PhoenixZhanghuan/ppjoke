@@ -1,5 +1,7 @@
 package com.example.libnetwork;
 
+import android.util.Log;
+
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -78,6 +80,7 @@ public class ApiService {
     }
 
     public static <T> GetRequest<T> get(String url) {
+
         return new GetRequest<>(sBaseUrl + url);
     }
 

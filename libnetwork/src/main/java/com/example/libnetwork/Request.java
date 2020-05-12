@@ -6,7 +6,6 @@ import android.util.Log;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.arch.core.executor.ArchTaskExecutor;
 
 import com.example.libnetwork.cache.CacheManager;

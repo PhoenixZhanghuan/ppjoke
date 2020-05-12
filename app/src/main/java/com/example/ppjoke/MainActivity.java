@@ -41,22 +41,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         navView.setOnNavigationItemSelectedListener(this);
 
-        GetRequest<JSONObject> request = new GetRequest<JSONObject>("http://www.baidu.com");
-//        request.execute();
-
-        request.execute(new JsonCallback() {
-            @Override
-            public void onSuccess(ApiResponse response) {
-//                super.onSuccess(response);
-                Log.e("zhang", response.message);
-            }
-
-            @Override
-            public void onError(ApiResponse response) {
-                super.onError(response);
-                Log.e("zhang", response.message);
-            }
-        });
 
     }
 

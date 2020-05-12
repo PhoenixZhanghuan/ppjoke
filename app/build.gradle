@@ -26,6 +26,10 @@ android {
         targetCompatibility "1.8"
     }
 
+    dataBinding{
+        enabled=true
+    }
+
 }
 
 dependencies {
@@ -47,4 +51,8 @@ dependencies {
 
     implementation project(path: ':libcommon')
     implementation project(path: ':libnetwork')
+
+    //错误收集
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
 }

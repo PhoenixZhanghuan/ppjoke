@@ -1,4 +1,4 @@
-package com.example.libcommon;
+package com.example.libcommon.global;
 
 import android.app.Application;
 

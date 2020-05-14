@@ -9,6 +9,9 @@ import androidx.lifecycle.Observer;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * @author zhanghuan
+ */
 public class LiveDataBus {
 
 //

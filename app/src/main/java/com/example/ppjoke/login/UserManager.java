@@ -45,10 +45,11 @@ public class UserManager {
     }
 
     public LiveData<User> login(Context context) {
-        Intent intent = new Intent(context, LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-        return userLiveData;
+//        Intent intent = new Intent(context, LoginActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.startActivity(intent);
+//        return userLiveData;
+        return null;
     }
 
     public boolean isLogin() {

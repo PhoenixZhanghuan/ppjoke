@@ -97,7 +97,7 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
             @Override
             public void onResult(@NonNull List<Feed> data) {
                 PagedList.Config config = currentList.getConfig();
-                if (data != null && data.size() > 0) {
+                if (data.size() > 0) {
                     //这里 咱们手动接管 分页数据加载的时候 使用MutableItemKeyedDataSource也是可以的。
                     //由于当且仅当 paging不再帮我们分页的时候，我们才会接管。所以 就不需要ViewModel中创建的DataSource继续工作了，所以使用
                     //MutablePageKeyedDataSource也是可以的

@@ -22,7 +22,7 @@ import com.example.ppjoke.databinding.LayoutFeedTypeImageBinding;
 import com.example.ppjoke.databinding.LayoutFeedTypeVideoBinding;
 import com.example.ppjoke.model.Feed;
 import com.example.ppjoke.ui.InteractionPresenter;
-//import com.example.ppjoke.ui.detail.FeedDetailActivity;
+import com.example.ppjoke.ui.detail.FeedDetailActivity;
 import com.example.ppjoke.view.ListPlayerView;
 
 /**
@@ -78,7 +78,7 @@ public class FeedAdapter extends AbsPagedListAdapter<Feed, FeedAdapter.ViewHolde
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FeedDetailActivity.startFeedDetailActivity(mContext, feed, mCategory);
+                FeedDetailActivity.startFeedDetailActivity(mContext, feed, mCategory) ;
                 onStartFeedDetailActivity(feed);
                 if (mFeedObserver == null) {
                     mFeedObserver = new FeedObserver();

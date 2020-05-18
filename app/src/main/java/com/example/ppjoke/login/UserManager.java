@@ -52,7 +52,7 @@ public class UserManager {
     }
 
     public boolean isLogin() {
-        return mUser == null ? false : mUser.expires_time > System.currentTimeMillis();
+        return mUser != null && mUser.expires_time > System.currentTimeMillis();
     }
 
     public User getUser() {

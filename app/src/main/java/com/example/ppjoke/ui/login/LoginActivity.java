@@ -1,4 +1,4 @@
-package com.example.ppjoke.login;
+package com.example.ppjoke.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;

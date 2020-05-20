@@ -1,4 +1,4 @@
-package com.example.ppjoke.login;
+package com.example.ppjoke.ui.login;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

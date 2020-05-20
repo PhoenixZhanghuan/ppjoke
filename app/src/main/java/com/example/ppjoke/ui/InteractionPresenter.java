@@ -19,7 +19,7 @@ import com.example.libcommon.global.AppGlobals;
 import com.example.libnetwork.ApiResponse;
 import com.example.libnetwork.ApiService;
 import com.example.libnetwork.JsonCallback;
-import com.example.ppjoke.login.UserManager;
+import com.example.ppjoke.ui.login.UserManager;
 import com.example.ppjoke.model.Comment;
 import com.example.ppjoke.model.Feed;
 import com.example.ppjoke.model.TagList;

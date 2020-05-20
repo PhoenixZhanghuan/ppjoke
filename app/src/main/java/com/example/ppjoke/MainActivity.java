@@ -5,18 +5,14 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
-import androidx.navigation.NavHostController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.libcommon.utils.StatusBar;
-import com.example.ppjoke.login.UserManager;
+import com.example.ppjoke.ui.login.UserManager;
 import com.example.ppjoke.model.Destination;
 import com.example.ppjoke.model.User;
 import com.example.ppjoke.utils.AppConfig;
@@ -24,7 +20,6 @@ import com.example.ppjoke.utils.NavGraphBuilder;
 import com.example.ppjoke.view.AppBottomBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -75,12 +70,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             Map.Entry<String, Destination> entry = iterator.next();
             Destination value = entry.getValue();
             if (value != null && !UserManager.get().isLogin() && value.needLogin && value.id == menuItem.getItemId()) {
-                UserManager.get().login(this).observe(this, new Observer<User>() {
-                    @Override
-                    public void onChanged(User user) {
-                        navView.setSelectedItemId(menuItem.getItemId());
-                    }
-                });
+                UserManager.get().login(this).observe(this, user -> navView.setSelectedItemId(menuItem.getItemId()));
                 return false;
             }
         }
